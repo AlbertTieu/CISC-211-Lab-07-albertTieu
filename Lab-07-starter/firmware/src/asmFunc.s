@@ -60,6 +60,21 @@ asmFunc:
     
     /*** STUDENTS: Place your code BELOW this line!!! **************/
 
+    /*unpack a_value*/
+    MOV r1, r0
+    ASRS r1, r1, #16
+    
+    /*unpack b_value*/
+    MOV r2, r0
+    RORS r2, r2, #16
+    ASRS r2, r2, #16
+    
+    /*store unpacked values*/
+    LDR r0, =a_value
+    STR r1, [r0]
+    
+    LDR r0, =b_value
+    STR r2, [r0]
     
     /*** STUDENTS: Place your code ABOVE this line!!! **************/
 
